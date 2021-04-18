@@ -1,0 +1,47 @@
+/* This is the Style Sheet for my journal entries*/
+h1 {
+    color: #FFFFFF;
+    background-color: hsl(60, 12%, 31%);
+    padding: 1rem;
+    border-style: dashed;
+}
+
+.page {
+    background-color: rgba(165,176,254,255);
+}
+
+a {
+    color: black;
+    margin: 1ch 1ch 1ch 1ch;
+}
+
+#day1 {
+    padding: 2vh;
+}
+
+#day2 {
+    padding: 20px;
+}
+
+#day3 {
+    padding: 2pc;
+}
+
+audio {
+    padding: 0.2in;
+    margin: auto;
+}
+
+footer {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    border-style: ridge;
+    border-color:black;
+    border-width: 2px;
+    border-radius: 1px;
+}
