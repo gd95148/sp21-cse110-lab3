@@ -1,38 +1,65 @@
 /* This is the Style Sheet for my journal entries*/
+* {
+    padding: 3px;       /* things will nice and spaced*/
+}
 h1 {
-    color: #FFFFFF;
-    background-color: hsl(60, 12%, 31%);
+    color: white;
+    background-color: hsl(60, 12%, 31%); /*grey*/
     padding: 1rem;
-    border-style: dashed;
+    border-style: dashed;   /*Nice box around headings */
+    text-align: center;
+    
 }
 
 #PageTitle {
-    display: inline-flex;
+    display: inline-flex;   /* make smaller box for title */
+    position:fixed;
+    margin-top: 0px;
 }
 
-.page {
-    background-color: rgba(165,176,254,255);
+.tdList {
+    font-size: 2rem;    /*Using class selector to make todo list font larger*/
 }
+
+body.page {
+    background-color: rgba(100,165,165,0.45);        /* light gray, combining two selectors */
+}
+
+@media only screen and (max-width: 1000px) {
+    body.page {
+      background-color: lightcoral;                  /* changes background based on window width*/
+    }
+  }
 
 a {
-    color: black;
+    color: black;       /* removes blue hyperlinks */
     margin: 1ch 1ch 1ch 1ch;
 }
 
+video {
+    display:block;
+    max-height: 1080px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    position:static;
+}
+
 #day1 {
+    color: white;   /* specific spacing and coloring for day#1 */
     padding: 2vh;
 }
 
-#day2 {
+#day2 {                 /* specific spacing and coloring for day#2 */
     padding: 20px;
 }
 
-#day3 {
+#day3 {                 /* specific spacing and coloring for day#3 */
     padding: 2pc;
 }
 
 audio {
-    padding: 0.2in;
+    padding: 0.2in;     /* spacing to avoid left smashed audio player */
     margin: auto;
 }
 
@@ -41,15 +68,65 @@ footer {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1rem;       /* provide psacing all around footer */
     padding-left: 1rem;
     padding-top: 1rem;
     border-style: ridge;
-    border-color:black;
+    border-color:black;       /* thin black border, ridged style */
     border-width: 2px;
     border-radius: 1px;
 }
 
-p {
-    display:block;
+p, audio {
+    display:block;              /* selector list display attributes */
 }
+
+a[href*="day"] {
+    font-size: 2em;     /* attribute selector for hyperlinks to larger font with according spacing*/
+    padding: 0.5rem;
+  }
+
+section form {
+    padding: 1rem;     /* descendant selector for form spacing */
+}
+
+fieldset > label {
+    font-size: 24px;    /*Child combinator to make fieldset labels much larger */
+}
+
+h1 + h2 {
+    text-align: center;     /* Adjacent sibling combinator h2 center align when immediately preced by h1 */
+}
+
+p ~ img {
+    display:block;
+    margin-left: auto;      /* General Combinator to center images following a paragraph*/
+    margin-right: auto;
+    width: 700px;
+    max-height: 480px;
+    position: static;
+}
+
+button:hover {
+    color:blueviolet;   /* Pseudo class for purple button on hover */
+}
+
+input:active {
+    width:40%;             /* selected input field become 40% wdith to show which item is selected */
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;         /* flex formatting to make form full width of screen*/
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+
+#third{
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 80px auto 80px;     /* grid formmating for spacing day#3*/
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
