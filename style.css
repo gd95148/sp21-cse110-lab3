@@ -12,18 +12,24 @@ h1 {
 }
 
 #PageTitle {
-    display: inline-flex;   /* make sammer box for title */
+    display: inline-flex;   /* make smaller box for title */
     position:fixed;
     margin-top: 0px;
 }
 
 .tdList {
-    font-size: 2rem;
+    font-size: 2rem;    /*Using class selector to make todo list font larger*/
 }
 
 body.page {
     background-color: rgba(100,165,165,0.45);        /* light gray, combining two selectors */
 }
+
+@media only screen and (max-width: 1000px) {
+    body.page {
+      background-color: lightcoral;                  /* changes background based on window width*/
+    }
+  }
 
 a {
     color: black;       /* removes blue hyperlinks */
@@ -96,7 +102,7 @@ p ~ img {
     display:block;
     margin-left: auto;      /* General Combinator to center images following a paragraph*/
     margin-right: auto;
-    width: 61%;
+    width: 700px;
     max-height: 480px;
     position: static;
 }
@@ -108,3 +114,19 @@ button:hover {
 input:active {
     width:40%;             /* selected input field become 40% wdith to show which item is selected */
 }
+
+fieldset {
+    display: flex;
+    flex-direction: column;         /* flex formatting to make form full width of screen*/
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+
+#third{
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 80px auto 80px;     /* grid formmating for spacing day#3*/
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
