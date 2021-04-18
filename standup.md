@@ -1,5 +1,5 @@
 # Standup Notes Template
-### Mood or Fun Fact: Someting to keep us spritely.
+### Mood or Fun Fact: Something to keep us spritely.
 ## Today:
 * Planning
 * Task
