@@ -6,6 +6,10 @@ h1 {
     border-style: dashed;
 }
 
+#PageTitle {
+    display: inline-flex;
+}
+
 .page {
     background-color: rgba(165,176,254,255);
 }
@@ -44,4 +48,8 @@ footer {
     border-color:black;
     border-width: 2px;
     border-radius: 1px;
+}
+
+p {
+    display:block;
 }
